@@ -1,0 +1,27 @@
+name: netflix_clone
+
+services:
+  # PostgreSQL 16 on host port 5433 (5432 is used by a local PostgreSQL installation)
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: netflix_clone
+      POSTGRES_USER: netflix
+      POSTGRES_PASSWORD: netflix
+    ports: ["5433:5432"]
+    volumes: [postgres-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U netflix -d netflix_clone"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # Catches every outgoing e-mail in development. Web UI: http://localhost:8027
+  mailpit:
+    image: axllent/mailpit:latest
+    restart: unless-stopped
+    ports: ["8027:8025", "1027:1025"]
+
+volumes:
+  postgres-data:

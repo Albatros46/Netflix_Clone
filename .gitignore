@@ -1,0 +1,4 @@
+# Backend: com.NetflixClone/.gitignore, Frontend: frontend/.gitignore
+logs/
+com.NetflixClone/upload/
+.idea/

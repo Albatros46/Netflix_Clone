@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="backend" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="com.NetflixClone" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.NetflixClone.NetflixCloneApplication" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com.NetflixClone" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

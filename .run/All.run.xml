@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="All" type="CompoundRunConfigurationType">
+    <toRun name="infra (postgres + mailpit)" type="docker-deploy" />
+    <toRun name="backend" type="SpringBootApplicationConfigurationType" />
+    <toRun name="frontend" type="js.build_tools.npm" />
+    <method v="2" />
+  </configuration>
+</component>
